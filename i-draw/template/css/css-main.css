@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200&display=swap');
+
+html{
+    font-family: 'Kanit', sans-serif;
+    height: 100%;
+    /* animation-duration: 1.5s; */
+    /* animation-name: htmlup; */
+}
+/* @keyframes htmlup{
+    from {filter: blur(20px);}
+    to {filter: blur(0px);}
+} */
+body{
+    margin: unset;
+    height: 100%;
+}
+.menu{
+    background-image: linear-gradient(217deg, rgb(180, 180, 180), rgba(211, 210, 210, 0.77) 70.71%), linear-gradient(127deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.61) 70.71%), linear-gradient(336deg, rgba(255, 255, 255, 0.418), rgb(255, 255, 255) 70.71%);
+    height: 120px;
+    padding-top : 5px;
+    padding-left : 12px;
+    padding-right : 12px;
+    box-shadow: 0 15px 0px 0 rgba(58, 59, 69, 0.609) !important;
+
+}
+.welcome{
+    font-size: x-large;
+    color: black;
+    animation: welcomemove 2s infinite;
+}
+@keyframes welcomemove {
+    from {
+        text-shadow: 0px 0px 0 rgba(7, 226, 36, 0);
+        transition: 0.1s;
+        }
+    to {
+        text-shadow: 2.15px 0.75px 0 grey;
+        transition: 0.1s;
+        }
+}
+.btn-green{
+    margin: auto;
+    background-color: rgb(3, 255, 37);
+    color: white;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.btn-green:hover{
+    margin-top: 5px;
+    background-color: rgb(5, 211, 32);
+    width: 98%;
+    cursor: pointer;
+
+}
+.message-box{
+    animation-name: messagemove;
+    animation-duration: 1.5s;
+    transition:0.3s linear;
+}
+@keyframes messagemove {
+    from {
+
+            visibility:hidden;
+            filter: blur(20px);
+            border-color: red;
+            /* filter: blur(20px); */
+
+            
+        }
+        50%{
+            visibility:hidden;
+            /* filter: blur(0px); */
+
+        }
+    
+    to {
+    filter: blur(0px);
+    border-color: rgb(0, 0, 0);
+    }
+}
+/* .pop-up2{
+    animation-duration: 1.5s;
+    animation-name: pupmove2;
+}
+@keyframes pupmove2 {
+    from {
+        height: 0%;
+        }
+    to {
+        height: 80%;
+        }
+} */
+.pop-up{
+    animation-duration: 1.5s;
+    animation-name: pupmove;
+
+}
+@keyframes pupmove {
+    from {
+        width: 0px;
+        }
+    to {
+        width: 100%;
+        }
+}
+.input100{
+    border-radius: 5px;
+    width: 50%;
+}
+.start{
+    animation-duration: 1.5s;
+    animation-name: startup;
+}
+@keyframes startup{ 
+    from {filter: blur(20px);}
+    to {filter: blur(0px);}
+}
