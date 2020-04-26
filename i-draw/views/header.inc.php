@@ -9,5 +9,20 @@
 <!-- <link href="i-draw/template/css/loader.css" rel="stylesheet"> -->
 <link href="i-draw/template/dist/css/bootstrap-select.css" rel="stylesheet">
 
-<title>I-Draw! | index</title>
+<title>I-Draw! | <?php
+
+if ($_GET['action'] == 'insert'){
+    echo "Register!";
+}else if ($_GET['action'] == 'login'){ 
+    echo "Login!";
+}else{
+    echo "Index!";
+}
+
+?>
+</title>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 

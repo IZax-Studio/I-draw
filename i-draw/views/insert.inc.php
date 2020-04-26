@@ -1,7 +1,7 @@
 <div class="message-box" style="min-height: calc(100vh - 51px);text-align: center;">
         <br>
         <br>
-        <div style="margin:auto;width: 20%;background: whitesmoke;border-radius: 12px;border-style: dotted;">
+        <div class="message-content">
             <form role="form" method="post" onSubmit="return check();" action="./Login/check_login.php" enctype="multipart/form-data" target="checklogin">
                 <div class="pop-up">
                     <h1>

@@ -1,7 +1,7 @@
 <div class="message-box" style="min-height: calc(100vh - 51px);text-align: center;">
         <br>
         <br>
-        <div class="message-box-content" style="margin:auto;width: 20%;background: whitesmoke;border-radius: 12px;border-style: dotted;">
+        <div class="message-content">
             <div class="pop-up">
                 <h1>
                     <p align="center">

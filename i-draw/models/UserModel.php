@@ -30,4 +30,20 @@ class UserModel extends BaseModel
             return $data;
         }
     }
+
+    function getUserByCode($id){
+        $sql = " SELECT * 
+        FROM account_name 
+        WHERE id = '30072544' 
+        ";
+        echo $sql;
+        if ($result = mysqli_query(static::$db, $sql, MYSQLI_USE_RESULT)) {
+            $data = [];
+            while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                $data[] = $row;
+            }
+            $result->close();
+            return $data;
+        }
+    }
 }
