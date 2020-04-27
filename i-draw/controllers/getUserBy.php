@@ -7,7 +7,7 @@ require_once('../models/UserModel.php');
 
 $user_model = new UserModel;
 
-$users = $user_model->getUserByCode($_SESSION['id']);;
+$users = $user_model->getUserByCode($_SESSION['id']);
 
 echo json_encode($users);
 ?>

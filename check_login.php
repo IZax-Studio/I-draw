@@ -12,7 +12,7 @@ if(isset($_POST['username']) && isset($_POST['password'])){
 	
     if(count($user) > 0){
 		
-        $_SESSION['username'] = $user;
+        $_SESSION['username'] = $user[0];
 
         echo "<script language=\"JavaScript\" type=\"text/javascript\"> window.parent.refresh();</script>";
     }else{

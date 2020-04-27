@@ -11,7 +11,7 @@
         </li>
         </a>
 
-        <a style="text-decoration:none" href="#">
+        <a style="text-decoration:none" href="?app=user&action=work">
         <li style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#video-player"></use>
@@ -23,11 +23,11 @@
         <li style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#speech-bubble"></use>
-            </svg><span><i class="far fa-comment-alt"></i>&nbsp; Message</span>
+            </svg><span><i class="fas fa-comment-alt"></i>&nbsp; Message</span>
         </li>
         </a>
 
-        <a style="text-decoration:none" href="#">
+        <a style="text-decoration:none" href="?app=user&action=community">
         <li style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#paper-airplane"></use>
@@ -39,10 +39,19 @@
         <li style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#paper-airplane"></use>
-            </svg><span><i class="far fa-envelope"></i>&nbsp; Following</span>
+            </svg><span><i class="fas fa-envelope"></i>&nbsp; Following</span>
         </li>
         </a>
 
+        <?php if ($level == "admin") {?>
+            <a style="text-decoration:none" href="#">
+            <li style="padding-bottom: 8px;">
+                <svg style="height:32px;width: 32px;">
+                    <use  xlink:href="#paper-airplane"></use>
+                </svg><span><i class="fas fa-user-cog"></i>&nbsp; User management</span>
+            </li>
+            </a>
+        <?php }?>
 
         </ul>
     </nav>
