@@ -7,7 +7,7 @@
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 
 <script>
-// ================================================================================================Menu Top
+// ================================================================================================Menu Top -->
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -17,7 +17,7 @@ function scrollFunction() {
     document.getElementById("navbar").style.top = "0px";
   }
 }
-// ================================================================================================Menu Left
+// ================================================================================================Menu Left -->
 window.onscroll = function() {scrollFunctionLeft()};
 
 function scrollFunctionLeft() {
@@ -27,5 +27,56 @@ function scrollFunctionLeft() {
     document.getElementById("navbar-left").style.left = "0px";
   }
 }
+// ================================================================================================Show Image -->
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
 </script>
+
+<!-- ================================================================================================Public chat -->
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+	setInterval(function(){
+		$("#public_chat").load('views/public_chat.php')
+    }, 2000);
+});
+// ====================================================================================================loading -->
+function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] != undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+onReady(function() {
+  setVisible('.page', true);
+  setVisible('#loading', false);
+});
+</script>
+
 

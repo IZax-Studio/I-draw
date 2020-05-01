@@ -27,7 +27,7 @@ $level = $user['level'];
 if ($level == "admin") {
     $level_color = "gold";
 }else {
-    $level_color = "white";
+    $level_color = "silver";
 }
 ?>
 
@@ -38,33 +38,36 @@ if ($level == "admin") {
         <?php require_once('views/header.inc.php') ?>
     </head>
     <body>
-        <!-- <div id="refresh-spinner"></div> --> 
-        <div class="content">
-        <table style="width:100%">
-            <tr>
-                <td colspan="2">
-                    <div id="navbar">
-                        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                            <?php require_once("views/menu_top.inc.php"); ?> 
+        <div class="page">
+            <!-- <div id="refresh-spinner"></div> --> 
+            <div class="content">
+            <table style="width:100%">
+                <tr>
+                    <td colspan="2">
+                        <div id="navbar">
+                            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                                <?php require_once("views/menu_top.inc.php"); ?> 
+                            </nav>
+                        </div>
+                </td>
+                </tr>    
+                <tr>
+                <td style="width: 20%;margin-top: auto;vertical-align: top;padding:25px;padding-left: 0px;padding-top: 150px;">
+                    <div id="navbar-left">
+                        <nav style="margin-bottom: 0;border-color: white;background-color: white;">
+                            <?php require_once("views/menu_left.inc.php"); ?> 
                         </nav>
                     </div>
-            </td>
-            </tr>    
-            <tr>
-            <td style="width: 20%;margin-top: auto;vertical-align: top;padding:25px;padding-left: 0px;padding-top: 150px;">
-                <div id="navbar-left">
-                    <nav style="margin-bottom: 0;border-color: white;background-color: white;">
-                        <?php require_once("views/menu_left.inc.php"); ?> 
-                    </nav>
-                </div>
-            </td>
-            <td style="padding-top: 150px;padding-right: 25px;">
-                <div id="page-wrapper" class="start" style="min-height: calc(100vh - 51px);">
-                    <?php require_once("body.inc.php"); ?>
-                </div>
-            </td>
-            </table>
-        </div> 
-        <?php require_once('views/footer.inc.php'); ?>
+                </td>
+                <td style="padding-top: 150px;padding-right: 25px;">
+                    <div id="page-wrapper" style="min-height: calc(100vh - 51px);">
+                        <?php require_once("body.inc.php"); ?>
+                    </div>
+                </td>
+                </table>
+            </div> 
+            <?php require_once('views/footer.inc.php'); ?>
+        </div>
+        <div id="loading"></div>
     </body>
 </html>
