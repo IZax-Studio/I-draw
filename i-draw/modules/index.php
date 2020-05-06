@@ -59,8 +59,8 @@ if ($level == "admin") {
                         </nav>
                     </div>
                 </td>
-                <td style="padding-top: 150px;padding-right: 25px;">
-                    <div id="page-wrapper" style="min-height: calc(100vh - 51px);">
+                <td style="padding-top: 20vh;padding-right: 25px;">
+                    <div class="start" style="min-height: calc(100vh - 51px);">
                         <?php require_once("body.inc.php"); ?>
                     </div>
                 </td>

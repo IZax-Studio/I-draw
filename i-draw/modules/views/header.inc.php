@@ -1,9 +1,11 @@
 <?php 
 require_once('../models/UserModel.php'); 
+require_once('../models/AdminModel.php'); 
 
 @session_start();
 
 $user_model = new UserModel;
+$admin_model = new UserModel;
 
 $id = $_GET['profile_id'];
 
@@ -28,6 +30,12 @@ if ($_GET['action'] == 'profile'){
     echo "Community!";
 }else if ($_GET['action'] == 'public_chat'){ 
     echo "Discussion board!";
+}else if ($_GET['action'] == 'user_management'){ 
+    $keyword = $_GET['keyword'];
+    echo "User management ";
+    echo 'Search "';
+    echo $keyword;
+    echo '"';
 }else{
     echo "Dashboard!";
 }

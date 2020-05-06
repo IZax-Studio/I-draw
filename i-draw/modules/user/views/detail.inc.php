@@ -10,12 +10,12 @@
 <div>
     <table style="width:100%">
     <tr style="background-position: center;background-repeat: no-repeat;background-size: cover;height: 250px;background-image: url(<?php echo"../upload/user/banner/",$users['img_banner'];?>);">
-        <td style="border-top-left-radius: 12px;border-top-right-radius: 12px;vertical-align: bottom;text-align: left;" colspan="2">
+        <td style="border-top-left-radius: 12px;vertical-align: bottom;text-align: left;" colspan="2">
             <p>  
                 <img class="img-profile" id="myImg" alt="<?php echo "This is a ",$users['account_name'],"'s profile.";?>" style="height: 150px;width: 150px;margin-left: 2vh;border-color: <?php echo $level_color?>;" src="<?php echo "../upload/user/",$users['img_profile']; ?>">
             </p>
         </td>
-        <td style="width:15%;vertical-align: bottom;">
+        <td style="width:15%;vertical-align: bottom;border-top-right-radius: 12px;">
             <?php if ($users['account_name'] != $user['account_name']) {?>
             <p>
                 <input type="button" class="btn-green" style="width:50%" value="Add friend">

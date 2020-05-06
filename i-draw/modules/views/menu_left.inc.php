@@ -12,7 +12,7 @@
         </li>
         </a>
 
-        <a style="text-decoration:none" href="?app=user&action=work">
+        <a style="text-decoration:none" href="?app=<?php echo $user['level'];?>&action=work">
         <li class="select-menu"  style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#video-player"></use>
@@ -28,7 +28,7 @@
         </li>
         </a>
 
-        <a style="text-decoration:none" href="?app=user&action=community">
+        <a style="text-decoration:none" href="?app=<?php echo $user['level'];?>&action=community">
         <li class="select-menu"  style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#paper-airplane"></use>
@@ -44,7 +44,7 @@
         </li>
         </a>
 
-        <a style="text-decoration:none" href="?app=user&action=public_chat">
+        <a style="text-decoration:none" href="?app=<?php echo $user['level'];?>&action=public_chat">
         <li class="select-menu"  style="padding-bottom: 8px;">
             <svg style="height:32px;width: 32px;">
                 <use  xlink:href="#paper-airplane"></use>
@@ -64,7 +64,7 @@
     <nav>
     <ul style="list-style-type:none;padding-inline-start:0px;margin:5px;">
 
-            <a style="text-decoration:none" href="?app=user&action=user_management">
+            <a style="text-decoration:none" href="?app=<?php echo $user['level'];?>&action=user_management">
             <li class="select-menu"  style="padding-bottom: 8px;">
                 <svg style="height:32px;width: 32px;">
                     <use  xlink:href="#paper-airplane"></use>
@@ -85,3 +85,5 @@
 </div>
 
 <?php }?>
+<!-- ===========================================================================================================================END -->
+

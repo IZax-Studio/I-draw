@@ -16,6 +16,28 @@ body{
     overflow-x: hidden;
     height: 100%;
 }
+#t_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#t_table td, #t_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+#t_table tr:nth-child(even){background-color: #f2f2f2;}
+  
+#t_table tr:hover {background-color: #ddd;cursor: pointer;}
+  
+#t_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #cccccc;
+    color: white;
+  }
 .select-menu{
     color: black;
     transition: .2s;
@@ -31,12 +53,11 @@ body{
 }
 .menu{
     background-color: gray;
-    height: 120px;
+    height: 14vh;
     padding-top : 5px;
     padding-left : 12px;
     padding-right : 12px;
     box-shadow: 0 15px 0px 0 rgba(58, 59, 69, 0.061) !important;
-    height:118px;
     transition: .5s;
     color: black;
 }
@@ -98,6 +119,55 @@ body{
     cursor: pointer;
 
 }
+.btn-light-blue{
+    border-radius:5px;
+    margin:2px;
+    padding:.5vh;
+    background-color:cornflowerblue;
+    transition: .3s;
+}
+.btn-light-blue:hover{
+    background-color:rgb(38, 100, 216);
+    transition: .3s;
+}
+.btn-light-green{
+    border-radius:5px;
+    margin:2px;
+    padding:.5vh;
+    background-color:rgb(100, 237, 123);
+    transition: .3s;
+}
+.btn-light-green:hover{
+    background-color:rgb(38, 216, 68);
+    transition: .3s;
+}
+.btn-light-gold{
+    border-radius:5px;
+    margin:2px;
+    padding:.5vh;
+    background-color:rgb(237, 212, 100);
+    transition: .3s;
+}
+.btn-light-gold:hover{
+    background-color:rgb(216, 213, 38);
+    transition: .3s;
+}
+.tag-detail1{
+    background-color: rgba(255, 255, 255, 0.45);
+    transition: .3s;
+}
+.tag-detail1:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: .3s;
+}
+.tag-detail2{
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: .3s;
+}
+.tag-detail2:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: .3s;
+}
 .message-box{
     animation-name: messagemove;
     animation-duration: 1.5s;
@@ -154,7 +224,7 @@ body{
     width: 50%;
 }
 .start{
-    animation-duration: 1.5s;
+    animation-duration: .5s;
     animation-name: startup;
 }
 @keyframes startup{ 
@@ -178,7 +248,7 @@ body{
     transition: .3s;
 }
 .btn-home{
-    width: 150px;
+    width: 20vh;
     border-style: dashed;
     border-radius: 12px;
     border-width: 2px;
@@ -186,15 +256,8 @@ body{
     padding: 5px;
     transition: .3s;
 }
-.img-profile{
-    height:45px;
-    width:45px;
-    border-radius:50%;
-    border-style:solid;
-    border-width: 2px;
-}
 .btn-home:hover{
-    width: 150px;
+    width: 20vh;
     border-style: solid;
     border-radius: 12px;
     border-width: 2px;
@@ -202,6 +265,13 @@ body{
     background-color: rgba(0, 0, 0, 0.301);
     padding: 5px;
     transition: .5s;
+}
+.img-profile{
+    height:45px;
+    width:45px;
+    border-radius:50%;
+    border-style:solid;
+    border-width: 2px;
 }
 .fade-in {
 	opacity: 1;
@@ -242,8 +312,7 @@ body{
 }
 /* width */
 ::-webkit-scrollbar {
-    width: 15px;
-    height: 90%;
+    width: 2vh;
 }
   
   /* Track */
@@ -428,7 +497,7 @@ body{
   }
   
   /* 100% Image Width on Smaller Screens */
-  @media only screen and (max-width: 700px){
+  /* @media only screen and (max-width: 700px){
     .modal-content {
       width: 100%;
     }
@@ -456,4 +525,4 @@ body{
   background-image: url("https://i.stack.imgur.com/MnyxU.gif");
   background-repeat: no-repeat;
   background-position: center;
-}
+} */

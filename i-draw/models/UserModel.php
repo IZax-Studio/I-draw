@@ -20,7 +20,7 @@ class UserModel extends BaseModel
         $sql = "SELECT *
         FROM `imghub_account`
         WHERE `imghub_account`.`username` = '$username' AND `imghub_account`.`password` = '$password'";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db, $sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -36,7 +36,7 @@ class UserModel extends BaseModel
         FROM `imghub_account` 
         WHERE imghub_account.id = '$id' 
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -50,7 +50,7 @@ class UserModel extends BaseModel
         $sql = " SELECT * 
         FROM `imghub_account`
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -64,9 +64,8 @@ class UserModel extends BaseModel
         $sql = " SELECT *
         FROM `tbl_public_chat`
         ORDER BY chat_id DESC
-        LIMIT 10
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -94,7 +93,7 @@ class UserModel extends BaseModel
                 '$name', '$msg', NOW() 
                 );
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             // while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -112,7 +111,7 @@ class UserModel extends BaseModel
         WHERE imghub_account.id = '$id'
         ORDER BY post_since DESC 
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -157,7 +156,7 @@ class UserModel extends BaseModel
          NOW(),
          NOW()
          )";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -184,7 +183,7 @@ class UserModel extends BaseModel
         `lastupdate`    = NOW()
         WHERE id = '$id'
         ";
-        // echo $sql;
+        // echo "<pre>",$sql,"</pre>";
         if ($result = mysqli_query(static::$db,$sql, MYSQLI_USE_RESULT)) {
             $data = [];
             while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){

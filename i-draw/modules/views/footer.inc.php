@@ -60,23 +60,54 @@ $(document).ready(function(){
     }, 2000);
 });
 // ====================================================================================================loading -->
-function onReady(callback) {
-  var intervalId = window.setInterval(function() {
-    if (document.getElementsByTagName('body')[0] != undefined) {
-      window.clearInterval(intervalId);
-      callback.call(this);
-    }
-  }, 1000);
-}
+// function onReady(callback) {
+//   var intervalId = window.setInterval(function() {
+//     if (document.getElementsByTagName('body')[0] != undefined) {
+//       window.clearInterval(intervalId);
+//       callback.call(this);
+//     }
+//   }, 1000);
+// }
 
-function setVisible(selector, visible) {
-  document.querySelector(selector).style.display = visible ? 'block' : 'none';
-}
+// function setVisible(selector, visible) {
+//   document.querySelector(selector).style.display = visible ? 'block' : 'none';
+// }
 
-onReady(function() {
-  setVisible('.page', true);
-  setVisible('#loading', false);
+// onReady(function() {
+//   setVisible('.page', true);
+//   setVisible('#loading', false);
+// });
+// ====================================================================================================back button -->
+function btn_back() {
+  window.history.back();
+}
+// ====================================================================================================refresh button -->
+function btn_refresh() {
+  location.reload();
+}
+// ====================================================================================================key count -->
+$('#count_key').keyup(function () {
+  var characterCount = $(this).val().length,
+  current = $('#current_count_key'),
+  maximum = $('#maximum_count_key'),
+  theCount = $('#the-count_count_key');
+  var maxlength = $(this).attr('maxlength');
+  var changeColor = 0.75 * maxlength;
+  current.text(characterCount);
+
+  if (characterCount > changeColor && characterCount < maxlength) {
+    current.css('color', '#FF4500');
+    current.css('fontWeight', 'bold');
+  }
+  else if (characterCount >= maxlength) {
+    current.css('color', '#B22222');
+    current.css('fontWeight', 'bold');
+  }
+  else {
+    var col = maximum.css('color');
+    var fontW = maximum.css('fontWeight');
+    current.css('color', col);
+    current.css('fontWeight', fontW);
+  }
 });
 </script>
-
-

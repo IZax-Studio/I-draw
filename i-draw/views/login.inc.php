@@ -69,10 +69,10 @@
                     </h1>
                 </div>
                 <p>
-                    Username : <input type="text" id="username" name="username" class="input100 form-control" style="text-align: center;border-radius: 5px;" placeholder="Username" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 46) || (event.charCode == 95)" />
+                    Username : <input type="text" id="username" maxlength="20" name="username" class="input100 form-control" style="text-align: center;border-radius: 5px;" placeholder="Username" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 46) || (event.charCode == 95)" />
                 </p>
                 <p>
-                    Password : <input type="password" id="password" name="password" class="input100 form-control" style="text-align: center;border-radius: 5px;" placeholder="Password" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 46) || (event.charCode == 95)" />
+                    Password : <input type="password" id="password" maxlength="20" name="password" class="input100 form-control" style="text-align: center;border-radius: 5px;" placeholder="Password" onkeypress="return (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode >= 48 && event.charCode <= 57) || (event.charCode == 46) || (event.charCode == 95)" />
                     <div align="center" id="error" name="error" style="color:#F00;padding:8px;"></div>
                 </p>
                 <br>
